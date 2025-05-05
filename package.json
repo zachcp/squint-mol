@@ -1,10 +1,10 @@
 {
   "name": "squint-mol",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -13,5 +13,9 @@
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "squint-cljs": "^0.8.146"
+  },
+  "exports": {
+    ".": "./dist/mvsj/core.mjs",
+    "./dist/mvsj/mvsj.mjs": "./dist/mvsj/mvsj.mjs"
   }
 }
