@@ -1,8 +1,10 @@
 (ns mvsj.tests
-  (:require
-   [mvsj.core :as molview]))
+  (:require [mvsj.core :as mcore])
+  (:require-macros [mvsj.macros :refer [nodize]]))
 
-(= 1 1)
+(let [node (nodize [:test {:param 1} []])]
+  (= node {:kind :test :params {:param 1} :children []}))
+
 ;; npx squint compile
 ;; node dist/nextjournal/clojure_mode_tests.mjs
 
