@@ -4,7 +4,9 @@
    ["fs" :as fs]
    ["ajv$default" :as Ajv]
    ["ajv-formats$default" :as addFormats])
-  (:require-macros [mvsj.macros :refer [nodize]]))
+  [mvsj.macros :refer [nodize]]
+  ;; (:require-macros [mvsj.macros :refer [nodize]])
+  )
 
 (defn- fetch-schema []
   (let [schema-json (.readFileSync fs "molviewspec-v1-openapi-schema.json" "utf8")]
@@ -20,4 +22,4 @@
       (js/console.log "✅ JSON is valid!")
       (js/console.error "❌ Validation errors:" (.-errors validate)))))
 
-(let [node_01 (nodize [:node {} []])])
+;; (let [node_01 (nodize [:node {} []])])

@@ -14,6 +14,9 @@
     "ajv-formats": "^3.0.1",
     "squint-cljs": "^0.8.146"
   },
+  "devDependencies": {
+    "@squint-cljs/macros": "0.1.0"
+  },
   "exports": {
     ".": "./dist/mvsj/core.mjs",
     "./dist/mvsj/mvsj.mjs": "./dist/mvsj/mvsj.mjs"
